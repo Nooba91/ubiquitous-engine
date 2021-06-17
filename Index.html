@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    
+    <title>Image Recognizer</title>
+</head>
+<body>
+    <center>
+        <h1><marquee behavior="scroll" direction="right" scrollamount="12">Image Recognizer</marquee></h1>
+        <b style="font-size: medium;">This website can identify the following people:</b>
+        <ul style="background-color: azure; width: 200px;">
+            <li>Girish - Dad</li>
+            <li>Danamma - Mom</li>
+            <li>Advaith - Me</li>
+        </ul>
+        <br>
+        <h6>Your webcam:</h6>
+        <div id="camera"></div>
+        <br>
+        <div id="output"></div>
+        <div id="load">
+            <div id="loading_icon"></div>
+            <b>Please wait... the website is identifying your image.</b>
+        </div>
+        <button class="btn btn-info" onclick="takeSnapshot()">Take Snapshot</button>
+        <button class="btn btn-success" onclick="identifyImage()">Identify Image</button>
+        <h4>Person:<span id="result_person"></span></h4>
+        <h4>Confidence:<span id="result_confidence"></span></h4>
+    </center>
+    <script src="main.js"></script>
+</body>
+</html>
